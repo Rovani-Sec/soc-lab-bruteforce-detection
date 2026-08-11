@@ -141,3 +141,43 @@ demonstrar o seguinte comportamento:
 O Wazuh deve identificar as tentativas repetitivas de
 autenticação malsucedida e gerar um alerta associado
 ao endereço IP responsável pela atividade.
+
+---
+
+## Attack Scenario
+
+O laboratório simulará um ataque de força bruta contra um
+serviço de autenticação.
+
+O atacante realizará múltiplas tentativas de autenticação
+utilizando credenciais inválidas.
+
+O objetivo é gerar eventos de falha de autenticação que possam
+ser coletados e analisados pelo Wazuh.
+
+### Attacker
+
+A máquina atacante será utilizada para gerar as tentativas
+de autenticação.
+
+**Sistema:** Kali Linux
+
+**Função:** Simular atividade maliciosa.
+
+### Target
+
+A máquina alvo será responsável por registrar as tentativas
+de autenticação.
+
+**Sistema:** [Windows 10 ]
+
+**Serviço:** [OpenSSH]
+
+### Expected Behavior
+
+O atacante deverá gerar múltiplas falhas de autenticação.
+
+O sistema alvo deverá registrar essas tentativas.
+
+O Wazuh deverá coletar os eventos e gerar um alerta quando
+o threshold configurado for atingido.
