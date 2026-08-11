@@ -120,3 +120,24 @@ detecção e resposta a ataques de força bruta.
 *** Bloqueio temporário do IP atacante. ***
 
     - Os valores acima serão validados e ajustados durante a implementação do laboratório..
+
+
+---
+
+## Detection Validation
+
+A detecção será considerada válida quando o laboratório
+demonstrar o seguinte comportamento:
+
+1. O atacante realiza múltiplas tentativas de autenticação.
+2. As tentativas malsucedidas são registradas pelo sistema alvo.
+3. Os eventos são coletados pelo Wazuh Agent.
+4. O Wazuh Manager identifica o padrão de comportamento.
+5. Um alerta de segurança é gerado.
+6. O endereço IP de origem é identificado corretamente.
+
+### Expected Result
+
+O Wazuh deve identificar as tentativas repetitivas de
+autenticação malsucedida e gerar um alerta associado
+ao endereço IP responsável pela atividade.
