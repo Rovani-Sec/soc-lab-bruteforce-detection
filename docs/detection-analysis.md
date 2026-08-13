@@ -14,7 +14,7 @@ O objetivo foi validar a capacidade do Wazuh de:
 
 ---
 
-2. Origem da Atividade
+## 2. Origem da Atividade
 
 O tráfego utilizado durante a simulação teve origem no host Kali Linux:
 
@@ -28,7 +28,7 @@ Windows IP: 192.168.56.104
 A comunicação ocorreu dentro da rede privada utilizada pelo laboratório.
 ---
 
-3. Reconhecimento
+## 3. Reconhecimento
 
 Antes da simulação das autenticações, foi realizado reconhecimento do endpoint utilizando Nmap.
 
@@ -41,7 +41,7 @@ A evidência do reconhecimento:
 
 ---
 
-4. Simulação das Tentativas de Autenticação
+## 4. Simulação das Tentativas de Autenticação
 
 Após o reconhecimento, foram realizadas múltiplas tentativas de autenticação contra o endpoint Windows utilizando o Kali Linux.
 
@@ -53,7 +53,7 @@ A evidência da atividade:
 
 ---
 
-5. Evento de Segurança Windows
+## 5. Evento de Segurança Windows
 
 As tentativas de autenticação geraram eventos de segurança no Windows.
 
@@ -101,7 +101,7 @@ A evidência do evento Windows:
 
 ---
 
-6. Coleta pelo Wazuh
+## 6. Coleta pelo Wazuh
 
 O Wazuh Agent instalado no Windows coletou os eventos de segurança e os encaminhou para o Wazuh Manager.
 
@@ -118,7 +118,7 @@ A evidência da detecção inicial:
 
 ---
 
-7. Correlação dos Eventos
+## 7. Correlação dos Eventos
 
 Eventos individuais de falha de autenticação podem representar situações legítimas, como um usuário digitando uma senha incorreta.
 
@@ -136,7 +136,7 @@ Quando o padrão é identificado, o Wazuh gera um alerta específico para o comp
 
 ---
 
-8. Regra Personalizada
+## 8. Regra Personalizada
 
 Foi criada uma regra personalizada no Wazuh:
 ```text
@@ -151,7 +151,7 @@ A evidência da regra personalizada:
 
 ---
 
-9. Alerta Gerado
+## 9. Alerta Gerado
 
 Após a geração das múltiplas falhas de autenticação, a regra personalizada foi acionada.
 
@@ -177,7 +177,7 @@ A evidência do alerta:
 
 ---
 
-10. Timeline da Atividade
+## 10. Timeline da Atividade
 
 O fluxo observado durante o laboratório foi:
 
@@ -216,7 +216,7 @@ O fluxo observado durante o laboratório foi:
 ```
 ---
 
-11. Análise do Analista
+## 11. Análise do Analista
 
 Com base nos eventos observados, foram identificados os seguintes elementos:
 
@@ -249,7 +249,7 @@ Múltiplas falhas de autenticação provenientes do mesmo endereço IP dentro da
 
 ---
 
-12. Classificação
+## 12. Classificação
 
 O comportamento observado é compatível com uma tentativa de:
 
@@ -258,7 +258,7 @@ Brute Force / Password Guessing
 ```
 A atividade foi realizada em ambiente controlado e não representa um ataque contra sistemas externos.
 
-13. MITRE ATT&CK
+## 13. MITRE ATT&CK
 
 A atividade está relacionada à técnica:
 
@@ -270,7 +270,7 @@ O cenário deste laboratório representa especificamente um comportamento de Pas
 
 ---
 
-14. Resposta e Contenção
+## 14. Resposta e Contenção
 
 Durante esta etapa do projeto, a prioridade foi validar a cadeia de:
 ```text
@@ -291,7 +291,7 @@ A pasta relacionada à resposta está localizada em:
 response/
 ```
 
-15. Conclusão
+## 15. Conclusão
 
 O laboratório demonstrou com sucesso a capacidade de transformar eventos individuais de falha de autenticação em um alerta contextualizado de segurança.
 
