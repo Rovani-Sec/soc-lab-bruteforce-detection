@@ -247,6 +247,35 @@ Falha de autenticação registrada pelo Windows.
 Comportamento
 Múltiplas falhas de autenticação provenientes do mesmo endereço IP dentro da janela de correlação configurada.
 
+
+### Veredito do Analista
+
+**Classificação:** Verdadeiro Positivo
+
+**Severidade:** Média
+
+**Confiança:** Alta
+
+**Avaliação:**
+
+A atividade observada é consistente com uma tentativa de
+força bruta de senha originada do host Kali Linux.
+
+A avaliação é fundamentada por:
+
+- Múltiplas tentativas de autenticação malsucedidas;
+- Mesmo IP de origem em todos os eventos;
+- Tipo de Logon de Rede 3;
+- ID de Evento do Windows 4625;
+- Mesma conta de destino;
+- Correlação dentro da janela de tempo configurada.
+
+**Conclusão:**
+
+A atividade é classificada como um Verdadeiro Positivo para
+ataque de força bruta de autenticação no Windows no
+ambiente de laboratório controlado.
+
 ---
 
 ## 12. Classificação
@@ -260,13 +289,13 @@ A atividade foi realizada em ambiente controlado e não representa um ataque con
 
 ## 13. MITRE ATT&CK
 
-A atividade está relacionada à técnica:
+A atividade está relacionada à técnica E Sub-técnica:
 
-T1110 — Brute Force - [Link Mitre ATT&CK](https://attack.mitre.org/techniques/T1110/)
+**Técnica** - T1110 — Brute Force - [Link Mitre ATT&CK](https://attack.mitre.org/techniques/T1110/) | **sub-técnica (T1110/001)** - [Link Mitre ATT&CK](https://attack.mitre.org/techniques/T1110/001)
 
 A técnica T1110 descreve tentativas de obter acesso através de tentativas repetidas de autenticação.
 
-O cenário deste laboratório representa especificamente um comportamento de Password Guessing / Brute Force.
+O cenário deste laboratório representa especificamente um comportamento da sub-técnica **T1110/001** de Password Guessing / Brute Force.
 
 ---
 
