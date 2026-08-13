@@ -1,6 +1,6 @@
 <img width="1823" height="863" alt="RovaniSec-Lab" src="https://github.com/user-attachments/assets/4a13b04f-a376-4002-87eb-ac363b00a49f" />
 
-# SOC Lab — Brute Force Detection & Automated Response
+# SOC Lab — Brute Force Detection & Incident Investigation
 
 Laboratório prático de **Blue Team / SOC** desenvolvido para simular, detectar e investigar tentativas de autenticação por força bruta contra um endpoint Windows utilizando **Wazuh SIEM**.
 
@@ -303,9 +303,9 @@ A resposta automatizada deve ser aplicada com cautela para evitar o bloqueio ind
 
 A atividade simulada está relacionada a técnicas de tentativa de obtenção de credenciais através de autenticações repetidas.
 
-##T1110 — Brute Force [Link Mitre ATT&CK](https://attack.mitre.org/techniques/T1110/)
+##T1110/001 — Brute Force [Link Mitre ATT&CK](https://attack.mitre.org/techniques/T1110/001)
 
-A técnica T1110 - Brute Force descreve tentativas sistemáticas de autenticação utilizando diferentes credenciais ou combinações de credenciais.
+A técnica T1110/001 - Brute Force descreve tentativas sistemáticas de autenticação utilizando diferentes credenciais ou combinações de credenciais.
 
 Dentro do laboratório, o comportamento observado é compatível com password guessing / brute force de autenticação.
 
@@ -324,13 +324,14 @@ soc-lab-bruteforce-detection/
 │   ├── 05-wazuh-rule-100100.png
 │   └── 06-wazuh-alert-details.png
 │
-├── wazuh/
-│   └── local_rules.xml
+├── lab/
+│   └── architeture.md
+│
+├── response/
+│   └── active-response.md
 │
 └── docs/
     └── detection-analysis.md
-````
-
 ---
 
 ## Competências Demonstradas
