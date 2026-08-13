@@ -189,7 +189,7 @@ Evidência:
 <img width="1843" height="227" alt="006-Wazuh-alert-details" src="https://github.com/user-attachments/assets/c5996e24-67a5-4898-90a5-1e409a794e15" />
 
 ---
-##Processo de Investigação
+## Processo de Investigação
 
 A investigação segue um fluxo semelhante ao utilizado em operações de SOC:
 
@@ -223,7 +223,7 @@ A investigação segue um fluxo semelhante ao utilizado em operações de SOC:
              Documentação
 ---
 
-Indicadores identificados
+## Indicadores identificados
 
 Origem: 192.168.56.103
 
@@ -235,7 +235,7 @@ Tipo de logon: 3 - Network Logon
 
 Autenticação: NTLM
 
-##Análise do Incidente
+## Análise do Incidente
 
 A sequência de eventos apresenta características compatíveis com uma tentativa de brute force / password guessing:
 
@@ -270,13 +270,13 @@ A resposta automatizada deve ser aplicada com cautela para evitar o bloqueio ind
 
 A atividade simulada está relacionada a técnicas de tentativa de obtenção de credenciais através de autenticações repetidas.
 
-##T1110/001 — Brute Force [Link Mitre ATT&CK](https://attack.mitre.org/techniques/T1110/001)
+## T1110/001 — Brute Force [Link Mitre ATT&CK](https://attack.mitre.org/techniques/T1110/001)
 
 A técnica T1110/001 - Brute Force descreve tentativas sistemáticas de autenticação utilizando diferentes credenciais ou combinações de credenciais.
 
 Dentro do laboratório, o comportamento observado é compatível com password guessing / brute force de autenticação.
 
-##Estrutura do Projeto
+## Estrutura do Projeto
 
 ```text
 soc-lab-bruteforce-detection/
@@ -299,6 +299,7 @@ soc-lab-bruteforce-detection/
 │
 └── docs/
     └── detection-analysis.md
+```
 ---
 
 ## Competências Demonstradas
@@ -321,7 +322,7 @@ Conceitos de Blue Team;
 Fundamentos de SOC;
 Processo de triagem e investigação de incidentes.
 
-##Próximos passos
+## Próximos passos
 
 Possíveis evoluções do laboratório:
 
