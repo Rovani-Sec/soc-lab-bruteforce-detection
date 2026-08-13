@@ -1,6 +1,6 @@
 <img width="1823" height="863" alt="RovaniSec-Lab" src="https://github.com/user-attachments/assets/4a13b04f-a376-4002-87eb-ac363b00a49f" />
 
-# 🛡️ SOC Lab — Brute Force Detection & Automated Response
+# SOC Lab — Brute Force Detection & Automated Response
 
 Laboratório prático de **Blue Team / SOC** desenvolvido para simular, detectar e investigar tentativas de autenticação por força bruta contra um endpoint Windows utilizando **Wazuh SIEM**.
 
@@ -64,7 +64,10 @@ O laboratório utiliza máquinas virtuais isoladas para representar o atacante, 
                 │ Wazuh Dashboard │
                 │     Alertas     │
                 └─────────────────┘
-🔧 Tecnologias utilizadas
+```
+
+## Tecnologias utilizadas
+
 Tecnologia	Função
 Wazuh	SIEM, correlação e detecção
 Wazuh Agent	Coleta de eventos do Windows
@@ -113,7 +116,10 @@ O primeiro passo foi realizar o reconhecimento do endpoint utilizando o Nmap.
 
 O objetivo foi identificar serviços de rede disponíveis antes da simulação das tentativas de autenticação.
 
-Evidência
+Evidência:
+
+<img width="828" height="344" alt="001-nmap-smb-enumeration" src="https://github.com/user-attachments/assets/69887534-9ca3-44c1-8990-282d168db9ea" />
+
 
 A enumeração permitiu identificar o serviço SMB exposto no endpoint Windows.
 
@@ -124,6 +130,9 @@ Após identificar o serviço, foram realizadas múltiplas tentativas de autentic
 O objetivo não foi obter acesso ao sistema, mas gerar eventos de falha de autenticação para alimentar o processo de detecção.
 
 Evidência
+
+<img width="1512" height="383" alt="002-Kali-attack" src="https://github.com/user-attachments/assets/16d71ee7-8bdd-4cf4-89d0-850f2f782be1" />
+
 
 As tentativas foram realizadas contra o usuário utilizado no laboratório, gerando falhas de autenticação no Windows.
 
@@ -149,6 +158,9 @@ O endereço 192.168.56.103 corresponde ao host Kali utilizado no laboratório.
 
 Evidência
 
+<img width="666" height="656" alt="003-Windows-Event-4625" src="https://github.com/user-attachments/assets/2fb0a53f-ebcd-4a25-8e55-5ed5bf5bb13c" />
+
+
 4️⃣ Detecção no Wazuh
 
 Os eventos de segurança foram coletados pelo Wazuh Agent e enviados ao Wazuh Manager.
@@ -160,7 +172,10 @@ Description: Logon Failure - Unknown user or bad password
 
 A partir desses eventos foi construída uma lógica de correlação para identificar múltiplas falhas provenientes da mesma origem.
 
-Evidência
+Evidência:
+
+<img width="1855" height="666" alt="004-wazuh-bruteforce-detection" src="https://github.com/user-attachments/assets/520f7fdb-cf6a-43d2-9681-396fc14e2414" />
+
 
 5️⃣ Regra personalizada de detecção
 
@@ -180,7 +195,10 @@ janela de tempo definida
         ↓
 Windows Authentication Brute Force
 
-Evidência
+Evidência:
+
+<img width="1589" height="288" alt="005-Wazuh-rule-100100" src="https://github.com/user-attachments/assets/087cb3b0-b306-4ddb-a585-9e2377403591" />
+
 
 A criação da regra demonstra a utilização de correlação de eventos para transformar eventos individuais em um alerta de segurança contextualizado.
 
@@ -198,7 +216,11 @@ Target User:     joao
 Logon Type:      3
 Event ID:        4625
 Authentication:  NTLM
-Evidência
+
+Evidência:
+
+<img width="1843" height="227" alt="006-Wazuh-alert-details" src="https://github.com/user-attachments/assets/c5996e24-67a5-4898-90a5-1e409a794e15" />
+
 ---
 ##Processo de Investigação
 
@@ -260,7 +282,9 @@ O alerta permitiu identificar a origem e o usuário alvo.
 
 O laboratório demonstra, portanto, o processo de transformação de telemetria bruta em um alerta contextualizado de segurança.
 
-##Resposta e Mitigação
+---
+
+## Resposta e Mitigação
 
 Como parte da estratégia de resposta, o laboratório considera o bloqueio temporário do endereço IP identificado como origem da atividade.
 
@@ -275,17 +299,19 @@ Auditoria das ações executadas.
 
 A resposta automatizada deve ser aplicada com cautela para evitar o bloqueio indevido de usuários legítimos ou sistemas confiáveis.
 
-##MITRE ATT&CK##
+## MITRE ATT&CK
 
 A atividade simulada está relacionada a técnicas de tentativa de obtenção de credenciais através de autenticações repetidas.
 
-##T1110 — Brute Force
+##T1110 — Brute Force [Link Mitre ATT&CK](https://attack.mitre.org/techniques/T1110/)
 
 A técnica T1110 - Brute Force descreve tentativas sistemáticas de autenticação utilizando diferentes credenciais ou combinações de credenciais.
 
 Dentro do laboratório, o comportamento observado é compatível com password guessing / brute force de autenticação.
 
 ##Estrutura do Projeto
+
+```text
 soc-lab-bruteforce-detection/
 │
 ├── README.md
@@ -303,9 +329,13 @@ soc-lab-bruteforce-detection/
 │
 └── docs/
     └── detection-analysis.md
-🎓 Competências Demonstradas
+````
 
-##Este laboratório demonstra conhecimentos práticos em:
+---
+
+## Competências Demonstradas
+
+### Este laboratório demonstra conhecimentos práticos em:
 
 Monitoramento de endpoints Windows;
 Windows Security Event Logs;
