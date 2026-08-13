@@ -1,4 +1,4 @@
-# Soc Lab - Brute Force Detection & Autmate Response
+# Soc Lab - Brute Force Detection & Automate Response
 
   
   Laboratório de Blue Team focado na detecção, investigação e resposta automatizada a ataque de força bruta
