@@ -152,7 +152,7 @@ Foi criada uma regra personalizada no Wazuh com o ID:
 
 A regra foi desenvolvida para identificar o comportamento de múltiplas falhas de autenticação provenientes da mesma origem dentro de uma determinada janela de tempo.
 
-##Condição de detecção
+## Condição de detecção
 
 5 falhas de autenticação
         +
@@ -266,11 +266,11 @@ Auditoria das ações executadas.
 
 A resposta automatizada deve ser aplicada com cautela para evitar o bloqueio indevido de usuários legítimos ou sistemas confiáveis.
 
-## MITRE ATT&CK
+##  ATT&CK
 
 A atividade simulada está relacionada a técnicas de tentativa de obtenção de credenciais através de autenticações repetidas.
 
-## T1110/001 — Brute Force [Link Mitre ATT&CK](https://attack.mitre.org/techniques/T1110/001)
+## T1110/001 — Brute Force [Link  ATT&CK](https://attack..org/techniques/T1110/001)
 
 A técnica T1110/001 - Brute Force descreve tentativas sistemáticas de autenticação utilizando diferentes credenciais ou combinações de credenciais.
 
