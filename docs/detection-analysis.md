@@ -171,7 +171,7 @@ Após a geração das múltiplas falhas de autenticação, a regra personalizada
 Rule ID: 100100
 Description: Windows Authentication Brute Force
 ```
-Indicadores observados:
+### Indicadores observados:
 ```text
 Source IP:       192.168.56.103
 Target User:     joao
@@ -230,31 +230,31 @@ O fluxo observado durante o laboratório foi:
 
 Com base nos eventos observados, foram identificados os seguintes elementos:
 
-Origem:
+### Origem:
 ```text 
 192.168.56.103
 ```
 Host Kali utilizado na simulação.
 
-Alvo 
+### Alvo 
 ```text
 192.168.56.104
 ```
 Endpoint Windows monitorado.
 
-Usuário: 
+### Usuário: 
 ```text 
 joao
 ```
 Conta utilizada como alvo das tentativas de autenticação.
 
-Evento: 
+### Evento: 
 ```text 
 4625
 ```
 Falha de autenticação registrada pelo Windows.
 
-Comportamento
+### Comportamento
 Múltiplas falhas de autenticação provenientes do mesmo endereço IP dentro da janela de correlação configurada.
 
 
@@ -299,9 +299,13 @@ A atividade foi realizada em ambiente controlado e não representa um ataque con
 
 ## 13. MITRE ATT&CK
 
-A atividade está relacionada à técnica E Sub-técnica:
+A atividade está relacionada à técnica e Sub-técnica:
 
-**Técnica** - T1110 — Brute Force - [Link Mitre ATT&CK](https://attack.mitre.org/techniques/T1110/) | **sub-técnica (T1110/001)** - [Link Mitre ATT&CK](https://attack.mitre.org/techniques/T1110/001)
+**Técnica:** T1110 — Brute Force  
+[MITRE ATT&CK — T1110](https://attack.mitre.org/techniques/T1110/)
+
+**Sub-técnica:** T1110.001 — Password Guessing  
+[MITRE ATT&CK — T1110.001](https://attack.mitre.org/techniques/T1110/001/)
 
 A técnica T1110 descreve tentativas de obter acesso através de tentativas repetidas de autenticação.
 
