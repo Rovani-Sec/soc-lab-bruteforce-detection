@@ -50,13 +50,13 @@ detecção e resposta a ataques de força bruta.
 
 *** Ferramentas: ***
  - Nmap
- - SSH Client
+ - SMB Service
 
 
 ### Target
 
-*** Sistema: *** [preencher]
-*** IP: ***  [preencher]
+*** Sistema: Windows 10
+*** IP: 192.168.56.104
 *** Função: *** Sistema alvo do ataque.
 
 *** Componentes: ***
