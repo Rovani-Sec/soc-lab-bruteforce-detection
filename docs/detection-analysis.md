@@ -130,7 +130,7 @@ Threshold utilizado
 +
 mesmo endereço IP
 +
-janela de 120 segundos definida
+janela de 60 segundos definida
 ```
 Quando o padrão é identificado, o Wazuh gera um alerta específico para o comportamento de força bruta.
 
@@ -140,8 +140,18 @@ Quando o padrão é identificado, o Wazuh gera um alerta específico para o comp
 
 Foi criada uma regra personalizada no Wazuh:
 ```text
-Rule ID: 100100
-Description: Windows Authentication Brute Force
+<group name="windows,authentication,bruteforce,">
+
+  <rule id="100100" level="12" frequency="5" timeframe="60">
+    <if_matched_sid>60122</if_matched_sid>
+    <same_field>win.eventdata.ipAddress</same_field>
+    <description>Windows Authentication Brute Force - Multiple failed logons from same source IP</description>
+    <mitre>
+      <id>T1110.001</id>
+    </mitre>
+  </rule>
+
+</group>
 ```
 A regra permite diferenciar uma falha isolada de autenticação de um comportamento repetitivo compatível com brute force.
 
