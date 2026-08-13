@@ -25,46 +25,7 @@ Construir um ambiente de laboratório capaz de:
 
 ---
 
-# 🏗️ Arquitetura do Laboratório
 
-O laboratório utiliza máquinas virtuais isoladas para representar o atacante, o endpoint monitorado e o servidor responsável pelo SIEM.
-
-```text
-                    LABORATÓRIO
-                         │
-                         ▼
-                ┌─────────────────┐
-                │   Kali Linux    │
-                │    Atacante     │
-                │ 192.168.56.103  │
-                └────────┬────────┘
-                         │
-                  Tentativas de
-                   autenticação
-                         │
-                         ▼
-                ┌─────────────────┐
-                │   Windows 10    │
-                │    Endpoint     │
-                │ Wazuh Agent     │
-                │     Sysmon      │
-                └────────┬────────┘
-                         │
-                  Eventos Windows
-                         │
-                         ▼
-                ┌─────────────────┐
-                │      Wazuh      │
-                │     Manager     │
-                │       SIEM      │
-                └────────┬────────┘
-                         │
-                         ▼
-                ┌─────────────────┐
-                │ Wazuh Dashboard │
-                │     Alertas     │
-                └─────────────────┘
-```
 
 ## Tecnologias utilizadas
 
@@ -85,6 +46,8 @@ MITRE ATT&CK	Classificação da atividade
 O laboratório simula um atacante realizando múltiplas tentativas de autenticação contra um serviço exposto no endpoint Windows.
 
 O fluxo utilizado foi:
+
+```text
 
 Kali Linux
      │
@@ -110,6 +73,10 @@ Regra personalizada 100100
      │
      ▼
 🚨 Windows Authentication Brute Force
+
+```
+---
+
 1️⃣ Reconhecimento do serviço
 
 O primeiro passo foi realizar o reconhecimento do endpoint utilizando o Nmap.
