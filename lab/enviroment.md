@@ -15,7 +15,7 @@ detecção e resposta a ataques de força bruta.
 │                     │
 │      Attacker       │
 │                     │
-│ Hydra / Nmap        │
+│        Nmap         | 
 └──────────┬──────────┘
            │
            │ Attack
@@ -25,8 +25,8 @@ detecção e resposta a ataques de força bruta.
 │                     │
 │   Windows / Linux   │
 │                     │
-│   Wazuh Agent       │
-│   Sysmon            │
+│     Wazuh Agent     │
+│      Sysmon         │
 └──────────┬──────────┘
            │
            │ Security Logs
@@ -49,7 +49,6 @@ detecção e resposta a ataques de força bruta.
 *** Função: *** Simulação do atacante
 
 *** Ferramentas: ***
- - Hydra
  - Nmap
  - SSH Client
 
