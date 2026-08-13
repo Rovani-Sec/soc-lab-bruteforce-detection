@@ -130,7 +130,7 @@ Threshold utilizado
 +
 mesmo endereço IP
 +
-janela de tempo definida
+janela de 120 segundos definida
 ```
 Quando o padrão é identificado, o Wazuh gera um alerta específico para o comportamento de força bruta.
 
