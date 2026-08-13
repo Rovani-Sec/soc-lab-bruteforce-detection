@@ -1,3 +1,4 @@
+<img width="1823" height="863" alt="ChatGPT Image 12 de ago  de 2026, 21_55_30" src="https://github.com/user-attachments/assets/4a13b04f-a376-4002-87eb-ac363b00a49f" />
 # Soc Lab - Brute Force Detection & Automate Response
 
   
@@ -9,6 +10,7 @@
 Construir um ambiente de laboratório capaz de:
 
  - Simular ataques de força bruta;
+
 
  - Coletar eventos de autenticação;
 
