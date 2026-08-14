@@ -266,15 +266,18 @@ Auditoria das ações executadas.
 
 A resposta automatizada deve ser aplicada com cautela para evitar o bloqueio indevido de usuários legítimos ou sistemas confiáveis.
 
-##  ATT&CK
+##  MITRE ATT&CK
+A atividade está relacionada à técnica e Sub-técnica:
 
-A atividade simulada está relacionada a técnicas de tentativa de obtenção de credenciais através de autenticações repetidas.
+Técnica: T1110 — Brute Force
+MITRE ATT&CK — T1110
 
-## T1110/001 — Brute Force [Link  ATT&CK](https://attack..org/techniques/T1110/001)
+Sub-técnica: T1110.001 — Password Guessing
+MITRE ATT&CK — T1110.001
 
-A técnica T1110/001 - Brute Force descreve tentativas sistemáticas de autenticação utilizando diferentes credenciais ou combinações de credenciais.
+A técnica T1110 descreve tentativas de obter acesso através de tentativas repetidas de autenticação.
 
-Dentro do laboratório, o comportamento observado é compatível com password guessing / brute force de autenticação.
+O cenário deste laboratório representa especificamente um comportamento da sub-técnica T1110/001 de Password Guessing / Brute Force.
 
 ## Estrutura do Projeto
 
