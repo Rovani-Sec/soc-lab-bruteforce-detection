@@ -270,10 +270,10 @@ A resposta automatizada deve ser aplicada com cautela para evitar o bloqueio ind
 A atividade está relacionada à técnica e Sub-técnica:
 
 Técnica: T1110 — Brute Force
-MITRE ATT&CK — T1110 [T1110](https://attack.mitre.org/techniques/T1110/)
+[MITRE ATT&CK — T1110](https://attack.mitre.org/techniques/T1110/)
 
 Sub-técnica: T1110.001 — Password Guessing
-MITRE ATT&CK — T1110.001 [T1110/001](https://attack.mitre.org/techniques/T1110/001/)
+[MITRE ATT&CK — T1110.001](https://attack.mitre.org/techniques/T1110/001/)
 
 A técnica T1110 descreve tentativas de obter acesso através de tentativas repetidas de autenticação.
 
