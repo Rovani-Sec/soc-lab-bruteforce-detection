@@ -14,8 +14,8 @@ O ambiente é composto por máquinas virtuais isoladas em uma rede de laboratór
 |---|---|
 | Kali Linux | Simulação do atacante |
 | Windows 10 | Endpoint monitorado |
-| Wazuh Agent | Coleta de eventos do Windows |
-| Wazuh Manager | Processamento e correlação dos eventos |
+| Wazuh Agent v4.14.6 | Coleta de eventos do Windows |
+| Wazuh Manager v4.14.6| Processamento e correlação dos eventos |
 | Wazuh Dashboard | Visualização e investigação dos alertas |
 | Sysmon | Telemetria adicional do endpoint |
 
