@@ -50,15 +50,21 @@ No manager do wazuh foi utilizado o comando:
   <timeout>300</timeout>
 </active-response>
 ```
+
 Evidências de Execução
 
 Log de execução capturado no Windows (active-responses.log), comprovando que o script foi iniciado, recebeu o IP malicioso via payload JSON e executou o bloqueio com sucesso:
 
 <img width="1285" height="174" alt="009-regra-active-response-acionada-windows" src="https://github.com/user-attachments/assets/1f209b38-7a53-4ab2-b335-d2f37f107edd" />
 
+## Regra criada no Firewall do Windows
+
+<img width="924" height="130" alt="010-regra-criada-no-firewallWindows-wazuh" src="https://github.com/user-attachments/assets/1240048a-fcef-448d-a9d9-f21948815128" />
+
+
 ## Bloqueio do IP Atacante
 
-Depois que o ataque é realizado contra o host windows [ataque contra o host[(../sreenshots/002-Kali-attack.png)
+Depois que o ataque é realizado contra o host windows
 
 <img width="1404" height="375" alt="011-ping-packet-loss" src="https://github.com/user-attachments/assets/e0e13d34-2370-4d96-be86-505c19fbc246" />
 
