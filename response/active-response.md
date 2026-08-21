@@ -68,4 +68,30 @@ Depois que o ataque é realizado contra o host windows
 
 <img width="1404" height="375" alt="011-ping-packet-loss" src="https://github.com/user-attachments/assets/e0e13d34-2370-4d96-be86-505c19fbc246" />
 
+## Estrutura
 
+```xml
+KALI
+  │
+  │ SMB brute force
+  ▼
+WINDOWS
+  │
+  │ Event ID 4625
+  ▼
+WAZUH AGENT
+  │
+  ▼
+WAZUH MANAGER
+  │
+  │ Rule 100100
+  ▼
+ACTIVE RESPONSE
+  │
+  │ netsh.exe
+  ▼
+WINDOWS FIREWALL
+  │
+  ▼
+192.168.56.103 BLOCKED
+```
