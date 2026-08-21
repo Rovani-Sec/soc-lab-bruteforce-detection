@@ -4,7 +4,7 @@
 Este laboratório demonstra a capacidade de resposta automatizada a incidentes (DFIR) utilizando o Wazuh XDR. O objetivo foi detectar um ataque de força bruta via protocolo SMB e acionar um bloqueio imediato no Firewall do Windows, isolando o IP do atacante (Kali Linux).
 
 ## 🛠️ Tecnologias e Ambiente
-* **SIEM / XDR:** Wazuh Manager (Linux)
+* **SIEM / XDR:** Wazuh Manager v4.14.6 (Linux)
 * **Atacante:** Kali Linux (Utilizando `NetExec / nxc` para Brute Force)
 * **Vítima:** Windows 10 Pro (com Wazuh Agent)
 * **Tática MITRE ATT&CK:** [T1110 - Brute Force](https://attack.mitre.org/techniques/T1110/)
