@@ -1,7 +1,7 @@
 # 🛡️ Detecção e Resposta Ativa (Active Response) com Wazuh
 
 ## 🎯 Objetivo
-Este laboratório demonstra a capacidade de resposta automatizada a incidentes (DFIR) utilizando o Wazuh XDR. O objetivo foi detectar um ataque de força bruta via protocolo SMB e acionar um bloqueio imediato no Firewall do Windows, isolando o IP do atacante (Kali Linux).
+Este laboratório demonstra a capacidade de resposta automatizada a incidentes (DFIR) utilizando o Wazuh XDR. O objetivo foi detectar um ataque de força bruta via protocolo SMB e acionar um bloqueio imediato no Firewall do Windows, bloqueiado o endereço IP de origem no Windows Defender Firewall (Kali Linux).
 
 ## 🛠️ Tecnologias e Ambiente
 * **SIEM / XDR:** Wazuh Manager v4.14.6 (Linux)
